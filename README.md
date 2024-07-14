@@ -26,32 +26,36 @@ This Spring Boot application manages questions and their associated responses, u
    git clone https://github.com/alaeddine-hash/Cache_Query.git
    cd Cache_Query
 
-Build the project:
-mvn clean install
+2. Build the project:
 
-Run the application:
-java -jar target/cache-query-app.jar
+  ```bash
+  mvn clean install
 
-Configuration : 
-The application is configured using application.properties file located in the src/main/resources folder.
-The application is configured to use an in-memory cache by default. To use a different cache implementation,
+3. Run the application:
+  ```bash
+  java -jar target/cache-query-app.jar
+
+4. Configuration :
+
+    The application is configured using application.properties file located in the src/main/resources folder.
+    The application is configured to use an in-memory cache by default. To use a different cache implementation,
 
 
-external.api.url=http://example.com/api/query
+    external.api.url=http://example.com/api/query
 
 
-Endpoint: Use the following endpoint to query responses:
+5. Endpoint: Use the following endpoint to query responses:
 
-POST /questions/query
+    POST /questions/query
 
-Example request body:
-{
-  "query": "What is your name?",
-  "language": "english"
-}
+6. Example request body:
+  {
+    "query": "What is your name?",
+    "language": "english"
+  }
 
-Example response:
+7. Example response:
 
-{
-  "response": "My name is ChatGPT."
-}
+  {
+    "response": "My name is ChatGPT."
+  }
