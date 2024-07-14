@@ -31,17 +31,12 @@ This Spring Boot application manages questions and their associated responses, u
   ```bash
   mvn clean install
 
-
 3. Run the application:
-
-
   ```bash
   java -jar target/cache-query-app.jar
 
 4. Configuration :
 
-    ```bash
-    # To change the cache expiration time, edit the application.properties file
     The application is configured using application.properties file located in the src/main/resources folder.
     The application is configured to use an in-memory cache by default. To use a different cache implementation,
 
@@ -50,12 +45,10 @@ This Spring Boot application manages questions and their associated responses, u
 
 
 5. Endpoint: Use the following endpoint to query responses:
-    ```bash
+
     POST /questions/query
 
 6. Example request body:
-
-  ```bash
   {
     "query": "What is your name?",
     "language": "english"
@@ -63,7 +56,6 @@ This Spring Boot application manages questions and their associated responses, u
 
 7. Example response:
 
-  ```bash
   {
     "response": "My name is ChatGPT."
   }
