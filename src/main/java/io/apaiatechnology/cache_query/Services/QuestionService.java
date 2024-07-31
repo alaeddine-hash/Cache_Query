@@ -21,7 +21,7 @@ public class QuestionService {
 
     private final Random random = new Random();
 
-
+    //TODO: Implement upperCase changes to the query
     public Optional<Question> getQuestionByQueryAndLanguage(String query, String language) {
         return questionRepository.findByQueryAndLanguage(query, language);
     }
@@ -33,5 +33,9 @@ public class QuestionService {
     public Response getRandomResponse(Question question) {
         List<Response> responses = question.getResponses();
         return responses.get(random.nextInt(responses.size()));
+    }
+
+    public Optional<Question> getQuestionById(long questionId) {
+        return questionRepository.findById( questionId);
     }
 }
